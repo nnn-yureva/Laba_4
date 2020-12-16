@@ -6,15 +6,15 @@ import java.util.*;
 public class Main {
     public static  void main(String[] args) throws IOException {
 
-        FileReader fileReader = new FileReader("C:\\Users\\Пользователь\\IdeaProjects\\Laba_4\\foreign_names.csv");
-        CSVReader reader = new CSVReader(fileReader, ';');
-        String[] nextLine;
+        FileReader file = new FileReader("C:\\Users\\Пользователь\\IdeaProjects\\Laba_4\\foreign_names.csv");
+        CSVReader reader = new CSVReader(file, ';');
+        String[] nextStr;
         List<Person> prsn = new ArrayList<>();
 
-        while ((nextLine = reader.readNext()) != null) {
-            Random rnd = new Random();
-            int num = rnd.nextInt(25000);
-            prsn.add(new Person(nextLine[0], nextLine[1], nextLine[2], nextLine[5], nextLine[3], nextLine[4],num));
+        while ((nextStr = reader.readNext()) != null) {
+            Random rndm = new Random();
+            int num = rndm.nextInt(25000);
+            prsn.add(new Person(nextStr[0], nextStr[1], nextStr[2], nextStr[5], nextStr[3], nextStr[4],num));
 
         }
         for (int i = 1; i < prsn.size(); i++)

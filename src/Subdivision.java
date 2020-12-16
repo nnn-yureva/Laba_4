@@ -1,4 +1,4 @@
-import java.util.*;
+
 public class Subdivision {
     private int id;
     private String title;
